@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mx-auto mt-10">
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-8">List of Python Books</h1>
+
+    <button id="addBookBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mb-6">
+        Add Book
+    </button>
+
+    <div id="addBookModal" class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center">
+        <div class="bg-white rounded-lg overflow-hidden shadow-xl w-full max-w-lg">
+            <div class="px-6 py-4">
+                <h2 class="text-xl font-bold mb-4">Add Book</h2>
+                <form id="bookForm" action="{% url 'create_book' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="{{ form.title.id_for_label }}" class="block text-gray-700 font-semibold mb-2">Title</label>
+                        {{ form.title }}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="{{ form.author.id_for_label }}" class="block text-gray-700 font-semibold mb-2">Author</label>
+                        {{ form.author }}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="{{ form.description.id_for_label }}" class="block text-gray-700 font-semibold mb-2">Description</label>
+                        {{ form.description }}
+                    </div>
+
+                    <div class="flex justify-between mt-6">
+                        <button type="button" class="cancelButton bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg">
+                            Cancel
+                        </button>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
+                            Save
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+        <thead class="bg-gray-800 text-white">
+            <tr>
+                <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Title</th>
+                <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Author</th>
+                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Actions</th>
+            </tr>
+        </thead>
+        <tbody class="text-gray-700">
+            {% for book in books %}
+            <tr>
+                <td class="w-1/3 text-left py-3 px-4">{{ book.title }}</td>
+                <td class="w-1/3 text-left py-3 px-4">{{ book.author }}</td>
+                <td class="flex gap-5 py-3 px-4">
+                    <a href="{% url 'edit_book' book.id %}" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg">
+                        Edit
+                    </a>
+                    <a href="{% url 'delete_book' book.id %}" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

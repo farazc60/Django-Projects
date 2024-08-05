@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            color: #61dafb;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+        .countdown-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .countdown div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 5px;
+            min-width: 80px;
+        }
+        .countdown div span {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            transition: all 0.5s ease;
+        }
+        .countdown div small {
+            font-size: 0.75em;
+            color: #bbbbbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown-container">
+        <h1>Countdown Timer</h1>
+        <div class="countdown">
+            <div>
+                <span id="days">{{ days }}</span>
+                <small>Days</small>
+            </div>
+            <div>
+                <span id="hours">{{ hours }}</span>
+                <small>Hours</small>
+            </div>
+            <div>
+                <span id="minutes">{{ minutes }}</span>
+                <small>Minutes</small>
+            </div>
+            <div>
+                <span id="seconds">{{ seconds }}</span>
+                <small>Seconds</small>
+            </div>
+        </div>
+    </div>
+    <script>
+        function updateCountdown() {
+            fetch(window.location.pathname)
+                .then(response => response.text())
+                .then(html => {
+                    document.body.innerHTML = html;
+                });
+        }
+
+        setInterval(updateCountdown, 1000);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django CRUD with Tailwind CSS</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    {% block content %}{% endblock %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const addBookBtn = document.getElementById('addBookBtn');
+    const addBookModal = document.getElementById('addBookModal');
+
+    addBookBtn.addEventListener('click', function () {
+        addBookModal.classList.remove('hidden');
+    });
+
+    document.querySelectorAll('.cancelButton').forEach(button => {
+        button.addEventListener('click', function () {
+            addBookModal.classList.add('hidden');
+        });
+    });
+
+    const bookForm = document.getElementById('bookForm');
+    bookForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(bookForm);
+        fetch(bookForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            } else {
+                console.error('Error:', data.errors);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+});
+
+</script>
+</body>
+</html>
