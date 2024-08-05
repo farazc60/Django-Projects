@@ -51,7 +51,7 @@
   </li>
 </ul>
 
-<h3>5. CRUD App</h3>
+<h3>5. <a href="https://www.codewithfaraz.com/python/68/create-a-currency-converter-using-django">CRUD App</a></h3>
 <ul>
   <li><strong>Description:</strong> A basic Create, Read, Update, Delete (CRUD) application.</li>
   <li><strong>Features:</strong>
@@ -63,7 +63,7 @@
   </li>
 </ul>
 
-<h3>6. Currency Converter</h3>
+<h3>6. <a href="https://www.codewithfaraz.com/python/68/create-a-currency-converter-using-django">Currency Converter</a></h3>
 <ul>
   <li><strong>Description:</strong> A currency converter that allows users to convert amounts between different currencies.</li>
   <li><strong>Features:</strong>
