@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Utilities Results</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Results</h1>
+        <div class="results-container">
+            <p><strong>Word Count:</strong> {{ word_count }}</p><br />
+            <p><strong>Titlecase Text:</strong> <pre>{{ titlecase_text }}</pre></p>
+            <p><strong>Uppercase Text:</strong> <pre>{{ uppercase_text }}</pre></p>
+            <p><strong>Lowercase Text:</strong> <pre>{{ lowercase_text }}</pre></p>
+            <p><strong>Reversed Text:</strong> <pre>{{ reversed_text }}</pre></p>
+
+            <h2>Word Frequency</h2>
+            <ul class="frequency-list">
+                {% for word, count in frequency.items %}
+                    <li><strong>{{ word }}:</strong> {{ count }}</li>
+                {% endfor %}
+            </ul>
+
+            <h2>Text Summary</h2>
+            <p>{{ summary }}</p>
+
+            <h2>Detected Language</h2>
+            <p>{{ language }}</p>
+
+            <a href="{% url 'home' %}" class="back-btn">Back</a>
+        </div>
+    </div>
+</body>
+</html>
