@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Cart</h1>
+        {% if cart %}
+            {% for item in cart.cartitem_set.all %}
+                <div class="cart-item">
+                    {% if item.product.image %}
+                        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                    {% else %}
+                        <img src="https://via.placeholder.com/50" alt="No Image Available">
+                    {% endif %}
+                    <div class="details">
+                        <p>{{ item.product.name }}</p>
+                        <form action="{% url 'cart:update_cart_item' item.id %}" method="post">
+                            {% csrf_token %}
+                            <input type="number" name="quantity" value="{{ item.quantity }}" min="1" class="quantity-input">
+                            <button type="submit" class="update-btn">Update</button>
+                        </form>
+                    </div>
+                    <div class="price">
+                        <p>${{ item.total_price }}</p>
+                    </div>
+                    <div class="remove">
+                        <a href="{% url 'cart:remove_from_cart' item.product.id %}" class="btn-remove">Remove</a>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="total-price">
+                <p>Total: ${{ total_price }}</p>
+            </div>
+            <a href="{% url 'cart:product_list' %}" class="btn">Back to Products</a>
+        {% else %}
+            <p>Your cart is empty.</p>
+            <a href="{% url 'cart:product_list' %}" class="btn">Back to Products</a>
+        {% endif %}
+    </div>
+</body>
+</html>
