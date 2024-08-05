@@ -6,7 +6,7 @@
 
 <h2>Projects Included</h2>
 
-<h3>1. Age Calculator</h3>
+<h3>1. <a href="https://www.codewithfaraz.com/python/52/create-age-calculator-in-django-step-by-step-guide">Age Calculator</a></h3>
 <ul>
   <li><strong>Description:</strong> A simple app that calculates a user's age based on their birthdate.</li>
   <li><strong>Features:</strong>
@@ -17,7 +17,7 @@
   </li>
 </ul>
 
-<h3>2. Authentication System</h3>
+<h3>2. <a href="https://www.codewithfaraz.com/python/62/create-authentication-system-in-django-login-and-signup-forms">Authentication System</a></h3>
 <ul>
   <li><strong>Description:</strong> A basic authentication system that includes user registration, login, and logout functionalities.</li>
   <li><strong>Features:</strong>
@@ -29,7 +29,7 @@
   </li>
 </ul>
 
-<h3>3. BMI Calculator</h3>
+<h3>3. <a href="https://www.codewithfaraz.com/python/53/creating-bmi-calculator-in-django-step-by-step-guide">BMI Calculator</a></h3>
 <ul>
   <li><strong>Description:</strong> A tool for calculating Body Mass Index (BMI) based on height and weight.</li>
   <li><strong>Features:</strong>
@@ -40,7 +40,7 @@
   </li>
 </ul>
 
-<h3>4. Countdown Timer</h3>
+<h3>4. <a href="https://www.codewithfaraz.com/python/59/create-countdown-timer-in-django-simple-guide">Countdown Timer</a></h3>
 <ul>
   <li><strong>Description:</strong> A countdown timer that can be set for any event or task.</li>
   <li><strong>Features:</strong>
@@ -74,7 +74,7 @@
   </li>
 </ul>
 
-<h3>7. Joke Generator</h3>
+<h3>7. <a href="https://www.codewithfaraz.com/python/57/create-a-joke-generator-in-django">Joke Generator</a></h3>
 <ul>
   <li><strong>Description:</strong> An app that fetches and displays random jokes.</li>
   <li><strong>Features:</strong>
@@ -85,7 +85,7 @@
   </li>
 </ul>
 
-<h3>8. Password Generator</h3>
+<h3>8. <a href="https://www.codewithfaraz.com/python/54/create-a-secure-password-generator-using-django">Password Generator</a></h3>
 <ul>
   <li><strong>Description:</strong> A tool for generating strong and random passwords.</li>
   <li><strong>Features:</strong>
@@ -96,7 +96,7 @@
   </li>
 </ul>
 
-<h3>9. Password Generator and Strength Checker</h3>
+<h3>9. <a href="https://www.codewithfaraz.com/python/55/create-password-generator-and-strength-checker-in-django">Password Generator and Strength Checker</a></h3>
 <ul>
   <li><strong>Description:</strong> A combination of password generation and strength checking.</li>
   <li><strong>Features:</strong>
@@ -107,7 +107,7 @@
   </li>
 </ul>
 
-<h3>10. QR Code Generator</h3>
+<h3>10. <a href="https://www.codewithfaraz.com/python/56/how-to-create-a-qr-code-generator-in-django">QR Code Generator</a></h3>
 <ul>
   <li><strong>Description:</strong> An app to generate QR codes from text or URLs.</li>
   <li><strong>Features:</strong>
@@ -118,7 +118,7 @@
   </li>
 </ul>
 
-<h3>11. Quiz App</h3>
+<h3>11. <a href="https://www.codewithfaraz.com/python/60/create-a-quiz-app-in-django-simple-guide">Quiz App</a></h3>
 <ul>
   <li><strong>Description:</strong> A simple quiz application with multiple-choice questions.</li>
   <li><strong>Features:</strong>
@@ -129,7 +129,7 @@
   </li>
 </ul>
 
-<h3>12. Shopping Cart</h3>
+<h3>12. <a href="https://www.codewithfaraz.com/python/64/create-a-shopping-cart-with-django-easy-guide-for-beginners">Shopping Cart</a></h3>
 <ul>
   <li><strong>Description:</strong> A basic shopping cart system for e-commerce applications.</li>
   <li><strong>Features:</strong>
@@ -140,7 +140,7 @@
   </li>
 </ul>
 
-<h3>13. Simple Calculator</h3>
+<h3>13. <a href="https://www.codewithfaraz.com/python/51/creating-a-simple-calculator-using-django">Simple Calculator</a></h3>
 <ul>
   <li><strong>Description:</strong> A basic calculator for arithmetic operations.</li>
   <li><strong>Features:</strong>
@@ -151,7 +151,7 @@
   </li>
 </ul>
 
-<h3>14. Text Utilities</h3>
+<h3>14. <a href="https://www.codewithfaraz.com/python/63/creating-text-utilities-with-django-uppercase-lowercase-word-count-more">Text Utilities</a></h3>
 <ul>
   <li><strong>Description:</strong> A collection of text processing tools such as case conversion, word count, and more.</li>
   <li><strong>Features:</strong>
@@ -162,7 +162,7 @@
   </li>
 </ul>
 
-<h3>15. Todo App</h3>
+<h3>15. <a href="https://www.codewithfaraz.com/python/66/create-todo-app-with-django-step-by-step-guide">Todo App</a></h3>
 <ul>
   <li><strong>Description:</strong> A simple task management application.</li>
   <li><strong>Features:</strong>
@@ -173,7 +173,7 @@
   </li>
 </ul>
 
-<h3>16. Translator</h3>
+<h3>16. <a href="https://www.codewithfaraz.com/python/61/create-translator-web-app-in-django-simple-step-by-step-guide">Translator</a></h3>
 <ul>
   <li><strong>Description:</strong> A language translation tool using an external API.</li>
   <li><strong>Features:</strong>
@@ -184,7 +184,7 @@
   </li>
 </ul>
 
-<h3>17. Weather App</h3>
+<h3>17. <a href="https://www.codewithfaraz.com/python/65/create-weather-app-using-django-step-by-step-guide">Weather App</a></h3>
 <ul>
   <li><strong>Description:</strong> An app that fetches and displays the current weather for a given location.</li>
   <li><strong>Features:</strong>
@@ -195,7 +195,7 @@
   </li>
 </ul>
 
-<h3>18. Word Counter</h3>
+<h3>18. <a href="https://www.codewithfaraz.com/python/58/build-a-word-counter-in-django-simple-django-tutorial">Word Counter</a></h3>
 <ul>
   <li><strong>Description:</strong> A tool to count the number of words and characters in a text.</li>
   <li><strong>Features:</strong>
