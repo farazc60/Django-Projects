@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Generator</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Joke Generator</h1>
+        <p>{{ joke }}</p>
+        <button onclick="window.location.reload();">Get Another Joke</button>
+    </div>
+</body>
+</html>
